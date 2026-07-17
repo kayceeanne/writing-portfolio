@@ -1,0 +1,362 @@
+@import url('https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html::-webkit-scrollbar {
+  display: none;
+}
+
+html {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+body{
+    background:#443C3D;
+    color:#E2D8CC;
+    font-family:"Inter",sans-serif;
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    position:relative;
+    overflow-x:hidden;
+}
+
+.container{
+    width:675px;
+    position:relative;
+    z-index:2;
+    padding:140px 0 100px;
+}
+
+.home-animation {
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: homeLoad .9s cubic-bezier(.22, 1, .36, 1) forwards;
+}
+
+@keyframes homeLoad {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.home .umbrella{
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1200px;
+    z-index: 0;
+}
+
+.inner-page .umbrella{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1200px;
+    z-index: 0;
+}
+
+header {
+    display:flex;
+    justify-content:flex-end;
+    margin-bottom:95px;
+}
+
+nav {
+    display:flex;
+    gap:20px;
+}
+
+nav a {
+    color:#E2D8CC;
+    text-decoration:none;
+    font-size:.85rem;
+    transition:color .3s ease;
+}
+
+nav a:hover {
+    color:#B59B79;
+}
+
+nav a.active {
+    color: #B59B79;
+    text-decoration: none;
+}
+
+::selection {
+  color: #443C3D;
+  background: #B59B79;
+}
+
+.hero {
+    max-width:720px;
+}
+
+.hero h1 {
+    font-family: "IM Fell English", serif;
+    font-size:50px;
+    font-weight: 400;
+    font-style: normal;
+    margin-bottom:20px;
+}
+
+.hero p {
+    line-height:1.4;
+    font-size:.9rem;
+    color:#E2D8CC;
+    text-align:left;
+}
+
+.hero a {
+    color: #E2D8CC;
+    text-decoration-color: #B59B79;
+    text-decoration-line: underline;
+    text-decoration-style: wavy;
+    text-decoration-thickness: 0.4px;
+}
+
+#about {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeUp 0.8s ease forwards;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.about h2 {
+    font-family: "IM Fell English", serif;
+    font-size:25px;
+    font-weight: 400;
+    font-style: normal;
+    margin-bottom:20px;
+    padding-top: 40px;
+}
+
+.about p {
+    line-height:1.4;
+    font-size:.9rem;
+    color:#E2D8CC;
+    margin-bottom: 10px;
+    text-align:left;
+}
+
+.about a {
+    color: #E2D8CC;
+    text-decoration-color: #B59B79;
+    text-decoration-line: underline;
+    text-decoration-style: wavy;
+    text-decoration-thickness: 0.4px;
+}
+
+.about a:hover {
+    color: #B59B79;
+    text-decoration-color: #E2D8CC;
+}
+
+.category {
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:#E2D8CC;
+    font-family: "IM Fell English", serif;
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-top:3rem;
+    margin-bottom: 1.5rem;
+}
+
+#article-main {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeUp 0.8s ease forwards;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.article-group {
+    margin-bottom:2rem;
+}
+
+.article-card {
+    margin-bottom:2rem;
+}
+
+.article-card:last-child {
+    margin-bottom:0;
+}
+
+.article-card h3 {
+    font-family: "IM Fell English", serif;
+    font-size:26px;
+    font-weight: 400;
+    font-style: normal;
+    margin-bottom:.5rem;
+}
+
+.article-card p {
+    margin:0;
+    font-size:.9rem;
+    line-height:1.4;
+}
+
+.article-card a {
+    color:#E2D8CC;
+    text-decoration:underline;
+    transition:.3s;
+}
+
+.article-card{
+    transition:.3s ease;
+}
+
+.article-card:hover{
+    transform:translateY(-2px);
+}
+
+.article-card:hover a{
+    color:#B59B79;
+}
+
+.article-card:hover p{
+    opacity:.8;
+}
+
+#project-main {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeUp 0.8s ease forwards;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.intro p {
+    margin-top:3rem;
+    margin-bottom:2rem;
+    font-size:.9rem;
+    line-height:1.4;
+}
+
+.project-group {
+    margin-bottom:2rem;
+}
+
+.project-card {
+    margin-bottom:2rem;
+}
+
+.project-card:last-child {
+    margin-bottom:0;
+}
+
+.project-card h3 {
+    font-family: "IM Fell English", serif;
+    font-size:26px;
+    font-weight: 400;
+    font-style: normal;
+    margin-bottom:.5rem;
+}
+
+.project-card p {
+    font-size: .9rem;
+    line-height: 1.4;
+}
+
+.cite {
+    margin: .5rem 0 .3rem;
+    font-style: italic;
+}
+
+.project-card p:last-child {
+    margin:0;
+    line-height:1.4;
+}
+
+.project-card a {
+    color:#E2D8CC;
+    text-decoration:underline;
+    transition:.3s;
+}
+
+.project-card{
+    transition:.3s ease;
+}
+
+.project-card:hover{
+    transform:translateY(-2px);
+}
+
+.project-card:hover a{
+    color:#B59B79;
+}
+
+.project-card:hover p{
+    opacity:.8;
+}
+
+.contact-links {
+    display:flex;
+    font-size:.9rem;
+    gap:1.5rem;
+    margin-top:2rem;
+}
+
+.contact-links a {
+    color:#E2D8CC;
+    text-decoration:none;
+    transition:.3s;
+}
+
+.contact-links a:hover {
+    color:#B59B79;
+}
+
+.highlight{
+    background: rgba(181, 155, 121, 0.25);
+    padding: 0 .15rem;
+    border-radius: 2px;
+}
